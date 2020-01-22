@@ -168,11 +168,36 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
     <Content Include="Views\Park\Index.cshtml" />
+    <Content Include="Media\Images\Betterpark Hintertux\Betterpark.jpg" />
+    <Content Include="Media\Images\Golden Roofpark Axamer Lizum\Golden Roofpark.jpg" />
+    <Content Include="Media\Images\Ischgl Snowpark\ischgl_snowpark_parkcheck_setup_januar_2019-prime_skiing-9.jpg" />
+    <Content Include="Media\Images\Ischgl Snowpark\ischgl-snowpark-park-area-2-improve-skills%402x.jpg" />
+    <Content Include="Media\Images\Kaunertaler Snowpark\Kaunertaler Snowpark.jpg" />
+    <Content Include="Media\Images\Kaunertaler Snowpark\Kaunertaler Snowpark2.jpg" />
+    <Content Include="Media\Images\Nordkette Skylinepark\Skylinepark.jpg" />
+    <Content Include="Media\Images\Penken Park Mayrhofen\Penken Park.jpg" />
+    <Content Include="Media\Images\Snowpark Kitzbühel\Snowpark Kitzbühel.jpg" />
+    <Content Include="Media\Images\Snowpark Sölden\Snowpark Sölden.jpg" />
+    <Content Include="Media\Images\St. Anton Snowpark\St. Anton Snowpark.jpg" />
+    <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo.jpg" />
+    <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo Setup.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Models\UserScripts\" />
+    <Folder Include="Media\" />
+    <Folder Include="Media\Images\" />
+    <Folder Include="Media\Images\Betterpark Hintertux\" />
+    <Folder Include="Media\Images\Golden Roofpark Axamer Lizum\" />
+    <Folder Include="Media\Images\Ischgl Snowpark\" />
+    <Folder Include="Media\Images\Kaunertaler Snowpark\" />
+    <Folder Include="Media\Images\Nordkette Skylinepark\" />
+    <Folder Include="Media\Images\Penken Park Mayrhofen\" />
+    <Folder Include="Media\Images\Snowpark Kitzbühel\" />
+    <Folder Include="Media\Images\Snowpark Sölden\" />
+    <Folder Include="Media\Images\St. Anton Snowpark\" />
+    <Folder Include="Media\Images\Stubaier Zoo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
