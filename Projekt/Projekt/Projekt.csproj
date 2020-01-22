@@ -125,6 +125,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\UserScripts\User.cs" />
+    <Compile Include="Models\UserScripts\Address.cs" />
+    <Compile Include="Controllers\ParkController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -164,10 +167,38 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
+    <Content Include="Views\Park\Index.cshtml" />
+    <Content Include="Media\Images\Betterpark Hintertux\Betterpark.jpg" />
+    <Content Include="Media\Images\Golden Roofpark Axamer Lizum\Golden Roofpark.jpg" />
+    <Content Include="Media\Images\Ischgl Snowpark\Ischgl Snowpark Setup.jpg" />
+    <Content Include="Media\Images\Ischgl Snowpark\Ischgl Snowpark.jpg" />
+    <Content Include="Media\Images\Kaunertaler Snowpark\Kaunertaler Snowpark.jpg" />
+    <Content Include="Media\Images\Kaunertaler Snowpark\Kaunertaler Snowpark2.jpg" />
+    <Content Include="Media\Images\Nordkette Skylinepark\Skylinepark.jpg" />
+    <Content Include="Media\Images\Penken Park Mayrhofen\Penken Park.jpg" />
+    <Content Include="Media\Images\Snowpark Kitzbühel\Snowpark Kitzbühel.jpg" />
+    <Content Include="Media\Images\Snowpark Sölden\Snowpark Sölden.jpg" />
+    <Content Include="Media\Images\St. Anton Snowpark\St. Anton Snowpark.jpg" />
+    <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo.jpg" />
+    <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo Setup.png" />
+    <Content Include="Scripts\Style.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Models\UserScripts\" />
+    <Folder Include="Media\" />
+    <Folder Include="Media\Images\" />
+    <Folder Include="Media\Images\Betterpark Hintertux\" />
+    <Folder Include="Media\Images\Golden Roofpark Axamer Lizum\" />
+    <Folder Include="Media\Images\Ischgl Snowpark\" />
+    <Folder Include="Media\Images\Kaunertaler Snowpark\" />
+    <Folder Include="Media\Images\Nordkette Skylinepark\" />
+    <Folder Include="Media\Images\Penken Park Mayrhofen\" />
+    <Folder Include="Media\Images\Snowpark Kitzbühel\" />
+    <Folder Include="Media\Images\Snowpark Sölden\" />
+    <Folder Include="Media\Images\St. Anton Snowpark\" />
+    <Folder Include="Media\Images\Stubaier Zoo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -209,6 +240,11 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
