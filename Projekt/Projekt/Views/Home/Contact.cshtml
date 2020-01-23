@@ -1,6 +1,56 @@
-﻿@{
+﻿
+
+
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
+
+<h2>Kontakt</h2>
+
+<p>
+    <table>
+
+        <thead>
+            <tr>
+                <td colspan="2">Über uns</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Vorname</td>
+                <td>@Model.Firstname</td>
+            </tr>
+
+            <tr>
+                <td>Lastname</td>
+                <td>@Model.Lastname</td>
+            </tr>
+
+            <tr>
+                <td>Geburtsdatum</td>
+                <td>@Model.Birthdate.ToLongDateString()</td>
+            </tr>
+            <tr>
+                <td>Geschlecht</td>
+                <td>@Model.Gender</td>
+            </tr>
+            <tr>
+                <td>Gehalt</td>
+                <td>@Model.Salary</td>
+            </tr>
+            <tr>
+                <td>Abteilung</td>
+                <td>@Model.Department</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Tabellenfußbereich</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</p>

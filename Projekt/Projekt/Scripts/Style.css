@@ -1,9 +1,8 @@
-﻿/* hier stehen unsere CSS-Formatierungen*/
-
-/* *{
-    border: 1px solid black;
+﻿
+body {
+    
 }
-*/
+
 #container {
     min-width: 900px;
     width: 80%;
@@ -47,7 +46,15 @@ footer {
     padding: 5px 10px;
 }
 
+.nav_level1 {
+    font-size: 1.2em;
+    padding-top: 15px;
+}
 
+.nav_level2 {
+    font-size: 0.9em;
+    padding-left: 15px;
+}
 
 
 
