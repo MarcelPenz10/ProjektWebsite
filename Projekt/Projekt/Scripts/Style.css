@@ -61,8 +61,10 @@ img {
     max-width:400px;
 }
 
-span {
+.ParkTxt {
     text-decoration: none;
-    color: black;
+    color: aqua;
+    font-size: 40px;
+    max-height: 40px;
 }
 

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function(){
     $(".ParkImg").hover( function(){
-        $(this).find('span').show().offset($(this).offset()).css('text-align','center');
+        $(this).find('p').show().offset($(this).offset());
     }, function(){
-        $(this).find('span').hide();
+        $(this).find('p').hide();
     });
 });
