@@ -12,5 +12,9 @@ namespace Projekt.Controllers
         {
             return View ();
         }
+        public ActionResult ShowOnePark()
+        {
+            return View();
+        }
     }
 }
