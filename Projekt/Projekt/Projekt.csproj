@@ -183,6 +183,7 @@
     <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo.jpg" />
     <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo Setup.png" />
     <Content Include="Scripts\Style.css" />
+    <Content Include="Scripts\JQuery.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
