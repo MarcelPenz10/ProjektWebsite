@@ -184,6 +184,8 @@
     <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo Setup.png" />
     <Content Include="Scripts\Style.css" />
     <Content Include="Scripts\JQuery.js" />
+    <Content Include="Media\Images\Status\Offen.png" />
+    <Content Include="Media\Images\Status\Geschlossen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -201,6 +203,7 @@
     <Folder Include="Media\Images\Snowpark Sölden\" />
     <Folder Include="Media\Images\St. Anton Snowpark\" />
     <Folder Include="Media\Images\Stubaier Zoo\" />
+    <Folder Include="Media\Images\Status\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
