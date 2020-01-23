@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Projekt.Models.UserScripts;
+
 namespace Projekt.Controllers
 {
     public class HomeController : Controller
@@ -20,8 +22,9 @@ namespace Projekt.Controllers
 
         public ActionResult Contact()
         {
-           
-            return View();
+            Kontakt p = new Kontakt("Firma", "Funpark", new Address("Straße", 12, 36553, "IBK"), "firma@icloud.com"); 
+
+            return View(p);           
         }
     }
 }

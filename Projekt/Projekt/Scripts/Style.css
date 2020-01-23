@@ -12,6 +12,7 @@ body {
 header {
     height: 100px;
     border-bottom: 1px solid #00ffff;
+    
 }
 
 nav {
@@ -46,17 +47,25 @@ footer {
     padding: 5px 10px;
 }
 
+
+
 .nav_level1 {
+    padding-left: 10px;
     font-size: 1.2em;
-    padding-top: 15px;
 }
 
 .nav_level2 {
+    padding-left: 10px;
     font-size: 0.9em;
-    padding-left: 15px;
 }
 
-
+.foot_level1 {
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    padding-right: 15px;
+    display: inline;
+   
+}
 
 
 img {

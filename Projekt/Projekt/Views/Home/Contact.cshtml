@@ -1,5 +1,4 @@
-﻿
-
+﻿@model Projekt.Models.UserScripts.Kontakt
 
 @{
     ViewBag.Title = "Contact";
@@ -13,42 +12,35 @@
 
         <thead>
             <tr>
-                <td colspan="2">Über uns</td>
+                <td colspan="2">Daten über uns</td>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td>Vorname</td>
-                <td>@Model.Firstname</td>
+                <td>@Model.Name</td>
             </tr>
 
             <tr>
-                <td>Lastname</td>
+                <td>Nachname</td>
                 <td>@Model.Lastname</td>
             </tr>
 
             <tr>
-                <td>Geburtsdatum</td>
-                <td>@Model.Birthdate.ToLongDateString()</td>
+                <td>EMail</td>
+                <td>@Model.EMail</td>
             </tr>
+
             <tr>
-                <td>Geschlecht</td>
-                <td>@Model.Gender</td>
-            </tr>
-            <tr>
-                <td>Gehalt</td>
-                <td>@Model.Salary</td>
-            </tr>
-            <tr>
-                <td>Abteilung</td>
-                <td>@Model.Department</td>
+                <td>Adresse</td>
+                <td>@Model.Address</td>
             </tr>
         </tbody>
 
         <tfoot>
             <tr>
-                <td colspan="2">Tabellenfußbereich</td>
+                
             </tr>
         </tfoot>
 

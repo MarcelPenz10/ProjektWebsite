@@ -60,6 +60,6 @@ namespace Projekt.Models
 
     enum Line
     {
-        FamilyLine, ProLine, MediumLine, NoobLine, notSpecified;
+        FamilyLine, ProLine, MediumLine, NoobLine, notSpecified
     }
 }
