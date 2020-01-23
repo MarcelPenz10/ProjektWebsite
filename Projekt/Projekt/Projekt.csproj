@@ -184,9 +184,30 @@
     <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo.jpg" />
     <Content Include="Media\Images\Stubaier Zoo\Stubaier Zoo Setup.png" />
     <Content Include="Scripts\Style.css" />
+    <Content Include="Scripts\JQuery.js" />
+    <Content Include="Media\Images\Status\Offen.png" />
+    <Content Include="Media\Images\Status\Geschlossen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
+=======
+    <Folder Include="Models\" />
+    <Folder Include="Models\UserScripts\" />
+    <Folder Include="Media\" />
+    <Folder Include="Media\Images\" />
+    <Folder Include="Media\Images\Betterpark Hintertux\" />
+    <Folder Include="Media\Images\Golden Roofpark Axamer Lizum\" />
+    <Folder Include="Media\Images\Ischgl Snowpark\" />
+    <Folder Include="Media\Images\Kaunertaler Snowpark\" />
+    <Folder Include="Media\Images\Nordkette Skylinepark\" />
+    <Folder Include="Media\Images\Penken Park Mayrhofen\" />
+    <Folder Include="Media\Images\Snowpark Kitzbühel\" />
+    <Folder Include="Media\Images\Snowpark Sölden\" />
+    <Folder Include="Media\Images\St. Anton Snowpark\" />
+    <Folder Include="Media\Images\Stubaier Zoo\" />
+    <Folder Include="Media\Images\Status\" />
+>>>>>>> 71393dca9d898ffe4f032edf008b595ea6e4d449
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

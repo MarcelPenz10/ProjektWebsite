@@ -16,6 +16,8 @@ namespace Projekt.Models
         }
         private int _parkId { get; set; }
 
+        public string Name { get; set; }
+
         public int Length
         {
             get { return _length; }
@@ -55,7 +57,29 @@ namespace Projekt.Models
         }
         private int _rails { get; set; } 
 
+        public int Cableways
+        {
+            get { return _cableways; }
+            set
+            {
+                if (_cableways >= 0)
+                {
+                    _cableways = value;
+                }
+            }
+        }
+        private int _cableways { get; set; }
 
+        public Park () : this (0, "", 0, 0,0, 0) { }
+        public Park(int parkId, string name, int length, int jumps, int rails, int cableways)
+        {
+            this.ParkId = parkId;
+            this.Name = name;
+            this.Length = length;
+            this.Jumps = jumps;
+            this.Rails = rails;
+            this.Cableways = cableways;
+        }
     }
 
     enum Line
