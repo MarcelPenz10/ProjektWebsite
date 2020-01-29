@@ -70,8 +70,10 @@ namespace Projekt.Models
         }
         private int _cableways { get; set; }
 
-        public Park () : this (0, "", 0, 0,0, 0) { }
-        public Park(int parkId, string name, int length, int jumps, int rails, int cableways)
+        public bool Open { get; set; }
+
+        public Park () : this (0, "", 0, 0,0, 0, false) { }
+        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, bool open)
         {
             this.ParkId = parkId;
             this.Name = name;
@@ -79,6 +81,7 @@ namespace Projekt.Models
             this.Jumps = jumps;
             this.Rails = rails;
             this.Cableways = cableways;
+            this.Open = open; 
         }
     }
 
