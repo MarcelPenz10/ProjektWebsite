@@ -190,8 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-<<<<<<< HEAD
-=======
     <Folder Include="Models\" />
     <Folder Include="Models\UserScripts\" />
     <Folder Include="Media\" />
@@ -207,7 +205,6 @@
     <Folder Include="Media\Images\St. Anton Snowpark\" />
     <Folder Include="Media\Images\Stubaier Zoo\" />
     <Folder Include="Media\Images\Status\" />
->>>>>>> 71393dca9d898ffe4f032edf008b595ea6e4d449
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
