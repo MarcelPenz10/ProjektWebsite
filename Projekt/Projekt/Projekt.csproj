@@ -148,6 +148,8 @@
     <Compile Include="Models\UserScripts\Address.cs" />
     <Compile Include="Controllers\ParkController.cs" />
     <Compile Include="Models\Park.cs" />
+    <Compile Include="Models\DB\UserDB.cs" />
+    <Compile Include="Models\DB\IUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -208,6 +210,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\DB\" />
+    <Folder Include="Models\DB\sql\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
