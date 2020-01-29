@@ -70,10 +70,10 @@ namespace Projekt.Models
         }
         private int _cableways { get; set; }
 
-        public bool Open { get; set; }
+        public int Open { get; set; }
 
-        public Park () : this (0, "", 0, 0,0, 0, false) { }
-        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, bool open)
+        public Park () : this (0, "", 0, 0,0, 0, 0) { }
+        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open)
         {
             this.ParkId = parkId;
             this.Name = name;
