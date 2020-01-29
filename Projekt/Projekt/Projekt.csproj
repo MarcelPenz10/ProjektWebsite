@@ -150,6 +150,8 @@
     <Compile Include="Models\Park.cs" />
     <Compile Include="Models\DB\UserDB.cs" />
     <Compile Include="Models\DB\IUser.cs" />
+    <Compile Include="Models\DB\ParkDB.cs" />
+    <Compile Include="Models\DB\IPark.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

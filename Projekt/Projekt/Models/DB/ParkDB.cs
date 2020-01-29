@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-
 namespace Projekt.Models.DB
 {
-    public class UserDB : IUser
+    public class ParkDB : IPark
     {
         private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=root;";
-        private MySqlConnection _connection;
+        private MySqlConnection _connection;  
 
         public void Open()
         {
@@ -32,5 +29,7 @@ namespace Projekt.Models.DB
                 this._connection.Close();
             }
         }
+
+
     }
 }
