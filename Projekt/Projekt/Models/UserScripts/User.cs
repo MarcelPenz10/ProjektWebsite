@@ -21,22 +21,25 @@ namespace Projekt.Models.UserScripts
         public string Name { get; set; }
         public string Lastname { get; set; }
         public DateTime Birthday { get; set; }
-        public Address Address { get; set; }
+        public int isAdmin { get; set; }
         public string EMail {get; set;}
         public string Password { get; set; }
         public Gender Gender { get; set; }
+        public string Username { get; set; }
 
-        public User () : this (0, "", "", DateTime.Now, new Address(), "", "", Gender.notSpecified) { }
-        public User(int userid, string name, string lastname, DateTime birthday, Address address, string eMail, string password, Gender gender)
+        public User () : this (0, "", "", DateTime.Now, 0, "", "", Gender.notSpecified, "") { }
+        public User(int userid, string name, string lastname, DateTime birthday, int isadmin, string eMail, string password, Gender gender, 
+            string username)
         {
             this.UserId = userid;
             this.Name = name;
             this.Lastname = lastname;
             this.Birthday = birthday;
-            this.Address = address;
+            this.isAdmin = isadmin;
             this.EMail = eMail;
             this.Password = password;
             this.Gender = gender;
+            this.Username = username;
         }
 
     }

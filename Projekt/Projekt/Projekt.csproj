@@ -145,7 +145,6 @@
     <Compile Include="Models\UserScripts\Kontakt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\UserScripts\User.cs" />
-    <Compile Include="Models\UserScripts\Address.cs" />
     <Compile Include="Controllers\ParkController.cs" />
     <Compile Include="Models\Park.cs" />
     <Compile Include="Models\DB\UserDB.cs" />
