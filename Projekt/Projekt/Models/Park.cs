@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Projekt.Models
 {
     public class Park
@@ -72,8 +73,10 @@ namespace Projekt.Models
 
         public int Open { get; set; }
 
-        public Park () : this (0, "", 0, 0,0, 0, 0) { }
-        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open)
+        public List<Comments> Comments { get; set; }
+
+        public Park () : this (0, "", 0, 0,0, 0, 0, new List<Comments>()) { }
+        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open, List<Comments> comments)
         {
             this.ParkId = parkId;
             this.Name = name;
@@ -82,6 +85,7 @@ namespace Projekt.Models
             this.Rails = rails;
             this.Cableways = cableways;
             this.Open = open;
+            this.Comments = comments;
         }
         public Park(int parkid, string name, int open)
         {

@@ -66,5 +66,41 @@ namespace Projekt.Models.DB
                 throw;
             }
         }
+
+        public Park GetOneSnowpark(int id)
+        {
+            if (this._connection == null || this._connection.State != ConnectionState.Open)
+            {
+                return null;
+            }
+
+            Park snowpark = new Park();
+
+            MySqlCommand cmd = this._connection.CreateCommand();
+            cmd.CommandText = "Select * from Park where id=" + id;
+            try
+            {
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        snowpark.ParkId = Convert.ToInt32(reader["id"]);
+                        snowpark.Name = Convert.ToString(reader["name"]);
+                        snowpark.Length = Convert.ToInt32(reader["length"]);
+                        snowpark.Jumps = Convert.ToInt32(reader["jumps"]);
+                        snowpark.Rails = Convert.ToInt32(reader["rails"]);
+                        snowpark.Cableways = Convert.ToInt32(reader["cableways"]);
+                        snowpark.Open = Convert.ToInt32(reader["status"]);
+
+                    }
+                }
+
+                return snowpark == null ? null : snowpark;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
