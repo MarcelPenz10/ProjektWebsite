@@ -15,19 +15,14 @@
 
     <div id="container">
         <header>
-
             <img class="Logo" src="../Media/Layout/Logo/Logo.PNG" />
-            
-            
 
-            <nav>
-                @Html.Partial("Navigation")
-            </nav>
 
         </header>
         <main>
-           
-
+            <nav>
+                @Html.Partial("Navigation")
+            </nav>
             <content>
                 @RenderBody()
             </content>
