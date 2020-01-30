@@ -87,18 +87,30 @@ namespace Projekt.Models.DB
                 {
                     while (reader.Read())
                     {
+                        /*if (reader.IsDBNull(2)) {
+                            snowpark.Length = null;
+                        }
+                        else
+                        {
+                            snowpark.Length = Convert.ToInt32(reader["length"]);
+                        }*/
                         snowpark.ParkId = Convert.ToInt32(reader["id"]);
                         snowpark.Name = Convert.ToString(reader["name"]);
-                        snowpark.Length = Convert.ToInt32(reader["length"]);
-                        snowpark.Jumps = Convert.ToInt32(reader["jumps"]);
-                        snowpark.Rails = Convert.ToInt32(reader["rails"]);
-                        snowpark.Cableways = Convert.ToInt32(reader["cableways"]);
+                        snowpark.Length = reader.IsDBNull(2) == true ? (int?)null : Convert.ToInt32(reader["length"]);
+                        snowpark.Jumps = reader.IsDBNull(3) == true ? (int?)null : Convert.ToInt32(reader["jumps"]);
+                        snowpark.Rails = reader.IsDBNull(4) == true ? (int?)null : Convert.ToInt32(reader["rails"]);
+                        snowpark.Cableways = reader.IsDBNull(5) == true ? (int?)null : Convert.ToInt32(reader["cableways"]);
                     }
                 }
                 List<Comments> comments = GetAllCommentsForOnePark(snowpark.ParkId);
-                for (int i = 0; i < comments.Count; i++)
-                {
-                    snowpark.Comments.Add(comments[i]);
+                if (comments != null) {
+                    for (int i = 0; i < comments.Count; i++)
+                    {
+                        snowpark.Comments.Add(comments[i]);
+                    }
+                }
+                else {
+                    snowpark.Comments = new List<Comments>();
                 }
                 return snowpark == null ? null : snowpark;
             }
