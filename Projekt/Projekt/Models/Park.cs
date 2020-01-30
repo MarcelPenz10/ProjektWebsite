@@ -81,7 +81,13 @@ namespace Projekt.Models
             this.Jumps = jumps;
             this.Rails = rails;
             this.Cableways = cableways;
-            this.Open = open; 
+            this.Open = open;
+        }
+        public Park(int parkid, string name, int open)
+        {
+            this.ParkId = parkid;
+            this.Name = name;
+            this.Open = open;
         }
     }
 

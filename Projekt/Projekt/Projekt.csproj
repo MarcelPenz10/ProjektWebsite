@@ -137,6 +137,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -154,9 +155,13 @@
     <Compile Include="Models\UserScripts\Kontakt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\UserScripts\User.cs" />
-    <Compile Include="Models\UserScripts\Address.cs" />
     <Compile Include="Controllers\ParkController.cs" />
     <Compile Include="Models\Park.cs" />
+    <Compile Include="Models\DB\UserDB.cs" />
+    <Compile Include="Models\DB\IUser.cs" />
+    <Compile Include="Models\DB\ParkDB.cs" />
+    <Compile Include="Models\DB\IPark.cs" />
+    <Compile Include="Models\UserScripts\Address.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -167,6 +172,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Media\Layout\berg.jfif" />
     <Content Include="Media\Layout\berge.jfif" />
     <Content Include="Media\Layout\Logo\Logo.PNG" />
     <Content Include="Scripts\bootstrap.js" />
@@ -216,6 +222,7 @@
     <Content Include="Scripts\JQuery.js" />
     <Content Include="Media\Images\Status\Offen.png" />
     <Content Include="Media\Images\Status\Geschlossen.png" />
+    <None Include="Models\DB\sql\ParkWebsite.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
