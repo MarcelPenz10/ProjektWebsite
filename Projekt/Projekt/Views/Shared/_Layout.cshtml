@@ -15,19 +15,23 @@
 
     <div id="container">
         <header>
-           
-           
-        
-        </header>
-        <main>
+
+            <img class="Logo" src="../Media/Layout/Logo/Logo.PNG" />
+            
+            
 
             <nav>
                 @Html.Partial("Navigation")
             </nav>
+
+        </header>
+        <main>
+           
+
             <content>
                 @RenderBody()
             </content>
-            <aside>Seitenbereich</aside>
+            <aside></aside>
         </main>
 
         <footer>
