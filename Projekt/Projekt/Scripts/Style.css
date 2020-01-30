@@ -11,7 +11,6 @@ body {
 header {
     height: 250px; 
     background-size: 500px;
-  
     background-size: cover;
     background-image: url(../Media/Layout/berg.jfif);
 }
@@ -21,6 +20,7 @@ nav {
     width: 15%;
     min-height: 500px;
     padding: 20px 5px 10px 10px;
+    
     
 }
 
@@ -50,6 +50,7 @@ footer {
 .nav_level1 {
     padding-left: 10px;
     font-size: 1.2em;
+    color: black;
     
 }
 
