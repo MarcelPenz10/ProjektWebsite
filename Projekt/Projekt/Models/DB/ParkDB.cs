@@ -118,7 +118,7 @@ namespace Projekt.Models.DB
             List<Comments> comments = new List<Comments>();
             MySqlCommand cmd = this._connection.CreateCommand();
             MySqlParameter paraid = new MySqlParameter("ID", id);
-            cmd.CommandText = "Select * from Comments where parkid=@ID";
+            cmd.CommandText = "Select * from Comments where commentspark_id=@ID";
             cmd.Parameters.Add(paraid);
 
             try
