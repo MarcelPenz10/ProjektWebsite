@@ -8,41 +8,39 @@
 <h2>Kontakt</h2>
 
 <p>
-    <table>
+    <table> 
+    
+    <thead class="tableK">
+        <tr>
+            <td colspan="2">Daten über uns</td>
+        </tr>
+    </thead>
 
-        <thead>
-            <tr>
-                <td colspan="2">Daten über uns</td>
-            </tr>
-        </thead>
+    <tbody class="tableK">
+        <tr>
+            <td>Vorname</td>
+            <td>@Model.Name</td>
+        </tr>
 
-        <tbody>
-            <tr>
-                <td>Vorname</td>
-                <td>@Model.Name</td>
-            </tr>
+        <tr>
+            <td>Nachname</td>
+            <td>@Model.Lastname</td>
+        </tr>
 
-            <tr>
-                <td>Nachname</td>
-                <td>@Model.Lastname</td>
-            </tr>
+        <tr>
+            <td>EMail</td>
+            <td>@Model.EMail</td>
+        </tr>
 
-            <tr>
-                <td>EMail</td>
-                <td>@Model.EMail</td>
-            </tr>
+        <tr>
+            <td>Adresse</td>
+            <td>@Model.Address</td>
+        </tr>
+    </tbody>
 
-            <tr>
-                <td>Adresse</td>
-                <td>@Model.Address</td>
-            </tr>
-        </tbody>
-
-        <tfoot>
-            <tr>
-                
-            </tr>
-        </tfoot>
+    <tfoot>
+        <tr></tr>
+    </tfoot>
 
     </table>
 </p>

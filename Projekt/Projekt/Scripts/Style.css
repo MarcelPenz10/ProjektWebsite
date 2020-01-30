@@ -6,30 +6,27 @@ body {
 #container {
     min-width: 900px;
     width: 80%;
-    margin: 100px auto;
 }
 
 header {
     height: 100px;
-    border-bottom: 1px solid #00ffff;
+    background-color: #b50909;
     
 }
 
 nav {
     min-width: 140px;
     width: 15%;
-    float: left;
     min-height: 500px;
     padding: 20px 5px 10px 10px;
+    
 }
 
 content {
     min-width: 500px;
     width: 65%;
     float: left;
-    min-height: 500px;
-    border-left: 1px solid #00ffff;
-    border-right: 1px solid #00ffff;
+    min-height: 400px;
     padding: 10px 10px 10px 10px;
 }
 
@@ -42,7 +39,6 @@ aside {
 
 footer {
     clear: both;
-    border-top: 1px solid #00ffff;
     text-align: right;
     padding: 5px 10px;
 }
@@ -52,12 +48,9 @@ footer {
 .nav_level1 {
     padding-left: 10px;
     font-size: 1.2em;
+    
 }
 
-.nav_level2 {
-    padding-left: 10px;
-    font-size: 0.9em;
-}
 
 .foot_level1 {
     font-size: 0.9em;
@@ -91,3 +84,23 @@ img {
     max-width: 200px;
 }
 
+
+.tableK {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.Logo{
+    max-width: 300px;
+    max-height: 300px;
+    padding-bottom: 200px;
+    float: left;
+}
+
+.Berge{
+
+
+
+}
