@@ -162,6 +162,7 @@
     <Compile Include="Models\DB\ParkDB.cs" />
     <Compile Include="Models\DB\IPark.cs" />
     <Compile Include="Models\UserScripts\Address.cs" />
+    <Compile Include="Models\Comments.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -223,6 +224,7 @@
     <Content Include="Media\Images\Status\Offen.png" />
     <Content Include="Media\Images\Status\Geschlossen.png" />
     <None Include="Models\DB\sql\ParkWebsite.sql" />
+    <Content Include="Views\Park\ShowOnePark.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

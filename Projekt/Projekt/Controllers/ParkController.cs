@@ -20,9 +20,12 @@ namespace Projekt.Controllers
             park.Close();
             return View (parks);
         }
-        public ActionResult ShowOnePark()
+        public ActionResult ShowOnePark(int id)
         {
-            return View();
+            park.Open();
+            Park onepark = park.GetOneSnowpark(id);
+            park.Close();
+            return View(onepark);
         }
     }
 }
