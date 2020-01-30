@@ -19,7 +19,7 @@ namespace Projekt.Models
 
         public string Name { get; set; }
 
-        public int Length
+        public int? Length
         {
             get { return _length; }
             set
@@ -30,9 +30,9 @@ namespace Projekt.Models
                 }
             }
         }
-        private int _length { get; set; }
+        private int? _length { get; set; }
 
-        public int Jumps
+        public int? Jumps
         {
             get { return _jumps; }
             set
@@ -43,9 +43,9 @@ namespace Projekt.Models
                 }
             }
         }
-        private int _jumps { get; set; }
+        private int? _jumps { get; set; }
 
-        public int Rails
+        public int? Rails
         {
             get { return _rails; }
             set
@@ -56,9 +56,9 @@ namespace Projekt.Models
                 }
             }
         }
-        private int _rails { get; set; } 
+        private int? _rails { get; set; } 
 
-        public int Cableways
+        public int? Cableways
         {
             get { return _cableways; }
             set
@@ -69,7 +69,7 @@ namespace Projekt.Models
                 }
             }
         }
-        private int _cableways { get; set; }
+        private int? _cableways { get; set; }
 
         public int Open { get; set; }
 
