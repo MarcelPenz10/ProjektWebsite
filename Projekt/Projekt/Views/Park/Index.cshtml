@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Projekt.Models.Park>
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -8,14 +10,21 @@
 <table>
     <tbody>
         <tr>
-            <td class="ParkImgImg"> 
+            <td class="ParkImgImg">
                 <a class="ParkImg" style="text-decoration: none" href="#">
                     <img class="ParkImgImg" height="400px" width="500px" src="../Media/Images/Betterpark Hintertux/Betterpark.jpg">
                     <p class="ParkTxt" style="display:none;">Betterpark Hintertux</p>
                 </a>
             </td>
             <td>
-                <img class="Status" src="../Media/Images/Status/Offen.png" />
+                @if (Model[0].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
             </td>
         </tr>
         <tr>
@@ -26,7 +35,14 @@
                 </a>
             </td>
             <td>
-                <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                @if (Model[1].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
 
             </td>
         </tr>
@@ -37,6 +53,17 @@
                     <p class="ParkTxt" style="display:none">Ischgl Snowpark</p>
                 </a>
             </td>
+            <td>
+                @if (Model[2].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
+            </td>
         </tr>
         <tr>
             <td class="ParkImgImg">
@@ -44,6 +71,17 @@
                     <img class="ParkImgImg" src="../Media/Images/Kaunertaler Snowpark/Kaunertaler Snowpark.jpg">
                     <p class="ParkTxt" style="display:none">Kaunertaler Snowpark</p>
                 </a>
+            </td>
+            <td>
+                @if (Model[3].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
             </td>
         </tr>
         <tr>
@@ -53,6 +91,17 @@
                     <p class="ParkTxt" style="display:none">Skylinkepark Nordkette</p>
                 </a>
             </td>
+            <td>
+                @if (Model[4].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
+            </td>
         </tr>
         <tr>
             <td class="ParkImgImg">
@@ -60,6 +109,17 @@
                     <img class="ParkImgImg" src="../Media/Images/Penken Park Mayrhofen/Penken Park.jpg" />
                     <p class="ParkTxt" style="display:none">Penken Park Mayrhofen</p>
                 </a>
+            </td>
+            <td>
+                @if (Model[5].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
             </td>
         </tr>
         <tr>
@@ -69,6 +129,17 @@
                     <p class="ParkTxt" style="display:none">Snowpark Kitzbühel</p>
                 </a>
             </td>
+            <td>
+                @if (Model[6].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
+            </td>
         </tr>
         <tr>
             <td class="ParkImgImg">
@@ -76,6 +147,17 @@
                     <img class="ParkImgImg" src="../Media/Images/Snowpark Sölden/Snowpark Sölden.jpg" />
                     <p class="ParkTxt" style="display:none">Snowpark Sölden</p>
                 </a>
+            </td>
+            <td>
+                @if (Model[7].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
             </td>
         </tr>
         <tr>
@@ -85,6 +167,17 @@
                     <p class="ParkTxt" style="display:none">St. Anton Snowpark</p>
                 </a>
             </td>
+            <td>
+                @if (Model[8].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
+            </td>
         </tr>
         <tr>
             <td class="ParkImgImg">
@@ -92,6 +185,17 @@
                     <img class="ParkImgImg" height="200" src="../Media/Images/Stubaier Zoo/Stubaier Zoo.jpg" />
                     <p class="ParkTxt" style="display:none">Stubaier Zoo</p>
                 </a>
+            </td>
+            <td>
+                @if (Model[9].Open == 1)
+                {
+                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                }
+                else
+                {
+                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                }
+
             </td>
         </tr>
     </tbody>

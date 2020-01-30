@@ -151,6 +151,7 @@
     <Compile Include="Models\DB\IUser.cs" />
     <Compile Include="Models\DB\ParkDB.cs" />
     <Compile Include="Models\DB\IPark.cs" />
+    <Compile Include="Models\UserScripts\Address.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

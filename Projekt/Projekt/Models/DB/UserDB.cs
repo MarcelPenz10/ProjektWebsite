@@ -10,7 +10,7 @@ namespace Projekt.Models.DB
 {
     public class UserDB : IUser
     {
-        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=root;";
+        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=root; password=Ghost3131;";
         private MySqlConnection _connection;
 
         public void Open()
@@ -32,5 +32,6 @@ namespace Projekt.Models.DB
                 this._connection.Close();
             }
         }
+
     }
 }
