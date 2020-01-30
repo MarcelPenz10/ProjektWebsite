@@ -7,7 +7,7 @@ namespace Projekt.Models.DB
 {
     public class ParkDB : IPark
     {
-        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=root; password=Ghost3131;";
+        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=WebProjekt; password=admin;";
         private MySqlConnection _connection;  
 
         public void Open()
