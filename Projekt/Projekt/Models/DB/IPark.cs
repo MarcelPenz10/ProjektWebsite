@@ -9,5 +9,6 @@ namespace Projekt.Models.DB
         void Open();
         void Close();
         List<Park> GetAllSnowparks();
+        Park GetOneSnowpark(int id);
     }
 }

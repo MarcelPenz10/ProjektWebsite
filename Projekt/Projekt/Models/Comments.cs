@@ -4,7 +4,7 @@ namespace Projekt.Models
     public class Comments
     {
         public int Parkid { get; set; }
-        public int Uerid { get; set; }
+        public int Userid { get; set; }
         public int Commentid { get; set; }
         public string Comment { get; set; }
 
@@ -13,8 +13,13 @@ namespace Projekt.Models
         {
             this.Commentid = commentid;
             this.Parkid = parkid;
-            this.Uerid = userid;
+            this.Userid = userid;
             this.Comment = comment;
+        }
+        public Comments(int commentid, string comment)
+        {
+            this.Comment = comment;
+            this.Commentid = commentid;
         }
     }
 }
