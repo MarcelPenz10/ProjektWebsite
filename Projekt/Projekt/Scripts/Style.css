@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    height: 250px; 
+    height: 250px;
     background-size: 500px;
     background-size: cover;
     background-image: url(../Media/Layout/berg.jfif);
@@ -18,10 +18,9 @@ header {
 nav {
     min-width: 140px;
     width: 15%;
+    float: left;
     min-height: 500px;
     padding: 20px 5px 10px 10px;
-    
-    
 }
 
 content {
@@ -98,9 +97,9 @@ img {
 
 .Logo{
     max-width: 300px;
-    max-height: 400px;
-    padding-bottom: 200px;
+    max-height: 150px;
     float: left;
 }
+
 
 

@@ -163,6 +163,7 @@
     <Compile Include="Models\DB\IPark.cs" />
     <Compile Include="Models\UserScripts\Address.cs" />
     <Compile Include="Models\Comments.cs" />
+    <Compile Include="Models\ParkViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -206,8 +207,7 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
     <Content Include="Views\Park\Index.cshtml" />
-    <Content Include="Media\Images\Betterpark Hintertux\Betterpark.jpg" />
-    <Content Include="Media\Images\Golden Roofpark Axamer Lizum\Golden Roofpark.jpg" />
+    <Content Include="Media\Images\BetterparkHintertux\BetterparkHintertux.jpg" />
     <Content Include="Media\Images\Ischgl Snowpark\Ischgl Snowpark Setup.jpg" />
     <Content Include="Media\Images\Ischgl Snowpark\Ischgl Snowpark.jpg" />
     <Content Include="Media\Images\Kaunertaler Snowpark\Kaunertaler Snowpark.jpg" />
@@ -225,9 +225,16 @@
     <Content Include="Media\Images\Status\Geschlossen.png" />
     <None Include="Models\DB\sql\ParkWebsite.sql" />
     <Content Include="Views\Park\ShowOnePark.cshtml" />
+    <Content Include="Content\Media2\Images\BetterparkHintertux\BetterparkHintertux.jpg" />
+    <Content Include="Media\Images\Golden Roofpark Axamer Lizum\Golden Roofpark.jpg" />
+    <Content Include="Content\Media2\Images\BetterparkHintertux\BetterparkHintertux1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Media2\" />
+    <Folder Include="Content\Media2\Images\" />
+    <Folder Include="Content\Media2\Images\BetterparkHintertux\" />
+    <Folder Include="Media\Images\Golden Roofpark Axamer Lizum\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
