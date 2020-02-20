@@ -7,24 +7,28 @@
 <h2>ShowOnePark</h2>
 
 <p>@Model.Park.Name</p>
-@{string path1 = "/Content/Media2/Images/BetterparkHintertux/BetterparkHintertux.jpg"; }
-<img src="@path1" />
 
 <div class="container">
     <h2>Carousel Example</h2>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            @for (int a = 1; a < Model.DI.GetFiles().Length; a++)
+            {
+                <li data-target="#myCarousel" data-slide-to="@a"></li>
+
+            }
         </ol>
         <div class="carousel-inner">
-            @for (int i = 0; i < Model.DirectoryInfo.GetFiles().Length; i++)
+            @{var firstimgpath = "../Content/Media/Images/" + @Model.Park.Name + "/" + @Model.FI[0].Name; }
+            <div class="item active">
+                <img src="@firstimgpath" style="width:100%;" />
+            </div>
+            @for (int i = 1; i < Model.DI.GetFiles().Length; i++)
             {
-                var path = @Model.FileInfo[i].FullName;
-                <div class="item active">
-                    <img src="@path1" alt="Los Angeles" style="width:100%;">
-
+                var path = "../Content/Media/Images/" + @Model.Park.Name + "/" + @Model.FI[i].Name;
+                <div class="item">
+                    <img src="@path" alt="@Model.FI[i].Name" style="width:100%;" />
                 </div>
             }
         </div>

@@ -34,7 +34,7 @@ namespace Projekt.Controllers
         }
         private static DirectoryInfo CountFiles(string path)
         {
-            DirectoryInfo di = new DirectoryInfo("/Content/Media2/Images/" + path);
+            DirectoryInfo di = new DirectoryInfo("Content/Media/Images/" + path);
             return di;
         }
     }
