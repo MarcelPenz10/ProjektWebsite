@@ -4,12 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ShowOnePark</h2>
-
-<p>@Model.Park.Name</p>
-
+<h2>@Model.Park.Name</h2>
 <div class="container">
-    <h2>Carousel Example</h2>
+    <h2>Images</h2>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -44,6 +41,27 @@
         </a>
     </div>
 </div>
+
+<table class="tg">
+  <tr>
+    <th class="datahead">Parkname</th>
+    <th class="datahead">Length</th>
+    <th class="datahead">Rails</th>
+    <th class="datahead">Jumps</th>
+    <th class="datahead">Cableways</th>
+    <th class="datahead">Location</th>
+    <th class="datahead">Status</th>
+  </tr>
+  <tr>
+    <td class="data">@Model.Park.Name</td>
+    <td class="data">@Model.Park.Length</td>
+    <td class="data">@Model.Park.Rails</td>
+    <td class="data">@Model.Park.Jumps</td>
+    <td class="data">@Model.Park.Cableways</td>
+    <td class="data">@Model.Park.Location</td>
+    <td class="data">@Model.Park.Open</td>
+  </tr>
+</table>
 
 @for (int i = 0; i < Model.Park.Comments.Count; i++)
 {

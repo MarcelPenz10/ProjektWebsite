@@ -75,8 +75,10 @@ namespace Projekt.Models
 
         public List<Comments> Comments { get; set; }
 
-        public Park () : this (0, "", 0, 0,0, 0, 0, new List<Comments>()) { }
-        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open, List<Comments> comments)
+        public string Location { get; set; }
+
+        public Park () : this (0, "", 0, 0,0, 0, 0, new List<Comments>(), "") { }
+        public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open, List<Comments> comments, string location)
         {
             this.ParkId = parkId;
             this.Name = name;
@@ -86,6 +88,7 @@ namespace Projekt.Models
             this.Cableways = cableways;
             this.Open = open;
             this.Comments = comments;
+            this.Location = location;
         }
         public Park(int parkid, string name, int open)
         {

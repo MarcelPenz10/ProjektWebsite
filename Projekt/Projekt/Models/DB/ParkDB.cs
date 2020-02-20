@@ -100,6 +100,8 @@ namespace Projekt.Models.DB
                         snowpark.Jumps = reader.IsDBNull(3) == true ? (int?)null : Convert.ToInt32(reader["jumps"]);
                         snowpark.Rails = reader.IsDBNull(4) == true ? (int?)null : Convert.ToInt32(reader["rails"]);
                         snowpark.Cableways = reader.IsDBNull(5) == true ? (int?)null : Convert.ToInt32(reader["cableways"]);
+                        snowpark.Open = Convert.ToInt32(reader["status"]);
+                        snowpark.Location = Convert.ToString(reader["location"]); 
                     }
                 }
                 List<Comments> comments = GetAllCommentsForOnePark(snowpark.ParkId);

@@ -209,7 +209,6 @@
     <None Include="Models\DB\sql\ParkWebsite.sql" />
     <Content Include="Views\Park\ShowOnePark.cshtml" />
     <Content Include="Content\Media\Images\Betterpark Hintertux\BetterparkHintertux.jpg" />
-    <Content Include="Content\Media\Images\Betterpark Hintertux\BetterparkHintertux1.jpg" />
     <Content Include="Content\Media\Images\Golden Roofpark\Golden Roofpark.jpg" />
     <Content Include="Content\Media\Images\Ischgl Snowpark\Ischgl Snowpark Setup.jpg" />
     <Content Include="Content\Media\Images\Ischgl Snowpark\Ischgl Snowpark.jpg" />
