@@ -96,12 +96,13 @@ namespace Projekt.Models.DB
                         }*/
                         snowpark.ParkId = Convert.ToInt32(reader["id"]);
                         snowpark.Name = Convert.ToString(reader["name"]);
-                        snowpark.Length = reader.IsDBNull(2) == true ? (int?)null : Convert.ToInt32(reader["length"]);
+                        snowpark.Length = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2);
                         snowpark.Jumps = reader.IsDBNull(3) == true ? (int?)null : Convert.ToInt32(reader["jumps"]);
                         snowpark.Rails = reader.IsDBNull(4) == true ? (int?)null : Convert.ToInt32(reader["rails"]);
                         snowpark.Cableways = reader.IsDBNull(5) == true ? (int?)null : Convert.ToInt32(reader["cableways"]);
                         snowpark.Open = Convert.ToInt32(reader["status"]);
-                        snowpark.Location = Convert.ToString(reader["location"]); 
+                        snowpark.Location = Convert.ToString(reader["location"]);
+                        snowpark.Description = Convert.ToString(reader["description"]); 
                     }
                 }
                 List<Comments> comments = GetAllCommentsForOnePark(snowpark.ParkId);

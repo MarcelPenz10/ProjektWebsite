@@ -164,6 +164,7 @@
     <Compile Include="Models\UserScripts\Address.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\ParkViewModel.cs" />
+    <Compile Include="Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -226,6 +227,8 @@
     <Content Include="Content\Media\Layout\berg.jfif" />
     <Content Include="Content\Media\Layout\berge.jfif" />
     <Content Include="Content\Media\Layout\Logo\Logo.PNG" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

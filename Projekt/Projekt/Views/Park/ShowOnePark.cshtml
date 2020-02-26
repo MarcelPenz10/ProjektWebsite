@@ -41,32 +41,66 @@
         </a>
     </div>
 </div>
-
+<br />
+<p>@Model.Park.Description</p>
+<br />
 <table class="tg">
-  <tr>
-    <th class="datahead">Parkname</th>
-    <th class="datahead">Length</th>
-    <th class="datahead">Rails</th>
-    <th class="datahead">Jumps</th>
-    <th class="datahead">Cableways</th>
-    <th class="datahead">Location</th>
-    <th class="datahead">Status</th>
-  </tr>
-  <tr>
-    <td class="data">@Model.Park.Name</td>
-    <td class="data">@Model.Park.Length</td>
-    <td class="data">@Model.Park.Rails</td>
-    <td class="data">@Model.Park.Jumps</td>
-    <td class="data">@Model.Park.Cableways</td>
-    <td class="data">@Model.Park.Location</td>
-    <td class="data">@Model.Park.Open</td>
-  </tr>
+    <tr>
+        <th class="datahead">Parkname</th>
+        <th class="datahead">Length</th>
+        <th class="datahead">Rails</th>
+        <th class="datahead">Jumps</th>
+        <th class="datahead">Cableways</th>
+        <th class="datahead">Location</th>
+        <th class="datahead">Status</th>
+    </tr>
+    @{
+        var Length = "";
+        if (@Model.Park.Length == -1)
+        {
+            Length = "Not Specified!";
+        }
+        else { Length = @Model.Park.Length.ToString() + "m"; }
+        var Rails = "";
+        if (@Model.Park.Length == -1)
+        {
+            Rails = "Not Specified!";
+        }
+        else { Rails = @Model.Park.Rails.ToString(); }
+        var Jumps = "";
+        if (@Model.Park.Length == -1)
+        {
+            Jumps = "Not Specified!";
+        }
+        else { Jumps = @Model.Park.Jumps.ToString(); }
+        var Cableways = "";
+        if (@Model.Park.Length == -1)
+        {
+            Cableways = "Not Specified!";
+        }
+        else { Cableways = @Model.Park.Cableways.ToString(); }
+        var Status = "Open";
+        if (@Model.Park.Open == 0)
+        {
+            Status = "Closed";
+        }
+    }
+    <tr>
+        <td class="data">@Model.Park.Name</td>
+        <td class="data">@Length</td>
+        <td class="data">@Rails</td>
+        <td class="data">@Jumps</td>
+        <td class="data">@Cableways</td>
+        <td class="data">@Model.Park.Location</td>
+        <td class="data">@Status</td>
+    </tr>
 </table>
 
 @for (int i = 0; i < Model.Park.Comments.Count; i++)
 {
     <p>@Model.Park.Comments[i].Comment</p>
 }
-
-
-
+<br />
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
