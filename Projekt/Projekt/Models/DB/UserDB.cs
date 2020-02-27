@@ -83,9 +83,9 @@ namespace Projekt.Models.DB
             }
             User user = new User();
             MySqlCommand cmd = this._connection.CreateCommand();
-            MySqlParameter paraid = new MySqlParameter("username", u.Username);
-            cmd.CommandText = "Select username, password from User where username=@username";
-            cmd.Parameters.Add(paraid);
+            cmd.CommandText = "Select username, password from User where username=@username and password=sha1(@pwd)";
+            cmd.Parameters.AddWithValue("username", u.Username);
+            cmd.Parameters.AddWithValue("pwd", u.Password);
 
             try
             {
