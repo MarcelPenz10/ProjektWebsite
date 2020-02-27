@@ -7,15 +7,15 @@ namespace Projekt.Models
     public class ParkViewModel
     {
         public Park Park { get; set; }
-        public DirectoryInfo DirectoryInfo { get; set; }
-        public FileInfo[] FileInfo { get; set; }
+        public DirectoryInfo DI { get; set; }
+        public FileInfo[] FI { get; set; }
 
         public ParkViewModel() : this(new Park(), null, null) { }
         public ParkViewModel(Park park, DirectoryInfo directoryInfo, FileInfo[] fileInfo)
         {
             this.Park = park;
-            this.DirectoryInfo = directoryInfo;
-            this.FileInfo = fileInfo;
+            this.DI = directoryInfo;
+            this.FI = fileInfo;
         }
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 @model Projekt.Models.UserScripts.User
 @{
@@ -68,4 +69,91 @@
 
     </table>
 
+=======
+﻿@model Projekt.Models.UserScripts.User
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registration</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Name, "Name: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.Name)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Lastname, "Lastname *: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.Lastname)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.EMail, "E-Mail *: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.EMail)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Birthday, "Birthday: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.Birthday, new { type = "date" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Gender, "Gender: ")
+            </td>
+            <td>
+                @Html.DropDownList("Direction", new List<SelectListItem>
+        {
+            new SelectListItem{ Text = "Male", Value = "0" },
+            new SelectListItem{ Text = "Female", Value = "1" },
+            new SelectListItem{ Text = "NotSpecified", Value = "2" }
+
+        }, new { onchange = "getAlldata()" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Username, "Username *: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.Username)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Password, "Password *: ")
+            </td>
+            <td>
+                @Html.TextBoxFor(u => u.Password)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;" class="center">
+                <br />
+                <input type="submit" value="Abschicken" />
+                <input type="reset" value="Abbrechen" />
+            </td>
+        </tr>
+    </table>
+>>>>>>> 23adacf42692426e5a33825577685bbf0ccda4b5
 }

@@ -5,43 +5,48 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
 <table>
+    <thead>
+        <tr>
+            <th style="font-size: 30px">Parks</th>
+            <th style="font-size: 30px">Status</th>
+        </tr>
+    </thead>
     <tbody>
         <tr>
             <td class="ParkImgImg">
                 <a class="ParkImg" style="text-decoration: none" href="/Park/ShowOnePark?id=1">
-                    <img class="ParkImgImg" height="400px" width="500px" src="../Media/Images/BetterparkHintertux/BetterparkHintertux.jpg">
+                    <img class="ParkImgImg" height="400px" width="500px" src="../Content/Media/Images/Betterpark Hintertux/BetterparkHintertux.jpg">
                     <p class="ParkTxt" style="display:none;">Betterpark Hintertux</p>
                 </a>
             </td>
             <td>
                 @if (Model[0].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
             </td>
         </tr>
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=2">
-                    <img class="ParkImgImg" src="../Media/Images/Golden Roofpark Axamer Lizum/Golden Roofpark.jpg">
+                    <img class="ParkImgImg" src="../Content/Media/Images/Golden Roofpark/Golden Roofpark.jpg">
                     <p class="ParkTxt" style="display:none;">Golden Roofpark Axamer Lizum</p>
                 </a>
             </td>
             <td>
                 @if (Model[1].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -49,18 +54,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=3">
-                    <img class="ParkImgImg" src="../Media/Images/Ischgl Snowpark/Ischgl Snowpark.jpg">
+                    <img class="ParkImgImg" src="../Content/Media/Images/Ischgl Snowpark/Ischgl Snowpark.jpg">
                     <p class="ParkTxt" style="display:none">Ischgl Snowpark</p>
                 </a>
             </td>
             <td>
                 @if (Model[2].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -68,18 +73,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none;" class="ParkImg" href="/Park/ShowOnePark?id=4">
-                    <img class="ParkImgImg" src="../Media/Images/Kaunertaler Snowpark/Kaunertaler Snowpark.jpg">
+                    <img class="ParkImgImg" src="../Content/Media/Images/Kaunertaler Snowpark/Kaunertaler Snowpark.jpg">
                     <p class="ParkTxt" style="display:none">Kaunertaler Snowpark</p>
                 </a>
             </td>
             <td>
                 @if (Model[3].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -87,18 +92,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=5">
-                    <img class="ParkImgImg" src="../Media/Images/Nordkette Skylinepark/Skylinepark.jpg">
+                    <img class="ParkImgImg" src="../Content/Media/Images/Skylinepark/Skylinepark.jpg">
                     <p class="ParkTxt" style="display:none">Skylinkepark Nordkette</p>
                 </a>
             </td>
             <td>
                 @if (Model[4].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -106,18 +111,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=6">
-                    <img class="ParkImgImg" src="../Media/Images/Penken Park Mayrhofen/Penken Park.jpg" />
+                    <img class="ParkImgImg" src="../Content/Media/Images/Penken Park/Penken Park.jpg" />
                     <p class="ParkTxt" style="display:none">Penken Park Mayrhofen</p>
                 </a>
             </td>
             <td>
                 @if (Model[5].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -125,18 +130,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=7">
-                    <img class="ParkImgImg" src="../Media/Images/Snowpark Kitzbühel/Snowpark Kitzbühel.jpg" />
+                    <img class="ParkImgImg" src="../Content/Media/Images/Snowpark Kitzbühel/Snowpark Kitzbühel.jpg" />
                     <p class="ParkTxt" style="display:none">Snowpark Kitzbühel</p>
                 </a>
             </td>
             <td>
                 @if (Model[6].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -144,18 +149,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=8">
-                    <img class="ParkImgImg" src="../Media/Images/Snowpark Sölden/Snowpark Sölden.jpg" />
+                    <img class="ParkImgImg" src="../Content/Media/Images/Snowpark Sölden/Snowpark Sölden.jpg" />
                     <p class="ParkTxt" style="display:none">Snowpark Sölden</p>
                 </a>
             </td>
             <td>
                 @if (Model[7].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -163,18 +168,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=9">
-                    <img class="ParkImgImg" src="../Media/Images/St. Anton Snowpark/St. Anton Snowpark.jpg" />
+                    <img class="ParkImgImg" src="../Content/Media/Images/St. Anton Snowpark/St. Anton Snowpark.jpg" />
                     <p class="ParkTxt" style="display:none">St. Anton Snowpark</p>
                 </a>
             </td>
             <td>
                 @if (Model[8].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
 
             </td>
@@ -182,18 +187,18 @@
         <tr>
             <td class="ParkImgImg">
                 <a style="text-decoration: none" class="ParkImg" href="/Park/ShowOnePark?id=10">
-                    <img class="ParkImgImg" height="200" src="../Media/Images/Stubaier Zoo/Stubaier Zoo.jpg" />
+                    <img class="ParkImgImg" height="200" src="../Content/Media/Images/Stubaier Zoo/Stubaier Zoo.jpg" />
                     <p class="ParkTxt" style="display:none">Stubaier Zoo</p>
                 </a>
             </td>
             <td>
                 @if (Model[9].Open == 1)
                 {
-                    <img class="Status" src="../Media/Images/Status/Offen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Offen.png" />
                 }
                 else
                 {
-                    <img class="Status" src="../Media/Images/Status/Geschlossen.png" />
+                    <img class="Status" src="../Content/Media/Images/Status/Geschlossen.png" />
                 }
             </td>
         </tr>
