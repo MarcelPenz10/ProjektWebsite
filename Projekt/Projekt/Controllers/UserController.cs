@@ -3,6 +3,8 @@ using System.Web.Mvc;
 using Projekt.Models.UserScripts;
 using Projekt.Models.DB;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Projekt.Controllers
 {
@@ -30,12 +32,9 @@ namespace Projekt.Controllers
                 repUsers.Open();
                 User user = repUsers.Login(u);
                 if (user != null)
-                {
-                    if (user.Password == u.Password)
-                    {
-                        Session["loggedInUser"] = u;
-                        return View("Index", "Park");
-                    }
+                { 
+                    Session["loggedInUser"] = u;
+                    return RedirectToAction("Index", "Park");
                 }
             }
             catch (Exception)
@@ -66,7 +65,7 @@ namespace Projekt.Controllers
                         if (repUsers.Insert(personDataFromForm))
                         {
                             Session["loggedInUser"] = personDataFromForm;
-                            return View("~/Views/Park/Index.cshtml");
+                            return RedirectToAction("Index", "Park");
                         }
                     }
                     catch (MySqlException)
