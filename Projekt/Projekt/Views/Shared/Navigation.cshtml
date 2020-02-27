@@ -17,8 +17,9 @@
     }
 </ul>
 
-<script>
+ <script type="text/javascript">
     function logouts() {
-        @Session["loggedInUser"] == null;
+        '@Session["loggedInUser"]' = null;
+        location.reload(true);
     }
-</script>
+ </script>
