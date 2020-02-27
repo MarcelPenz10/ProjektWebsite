@@ -9,3 +9,4 @@
         $(this).find('img').css('opacity', '1');
     });
 });
+
