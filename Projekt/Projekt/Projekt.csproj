@@ -149,10 +149,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\UserScripts\Kontakt.cs" />
+    <Compile Include="Models\UserScripts\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\UserScripts\User.cs" />
     <Compile Include="Controllers\ParkController.cs" />
@@ -228,13 +230,14 @@
     <Content Include="Content\Media2\Images\BetterparkHintertux\BetterparkHintertux.jpg" />
     <Content Include="Media\Images\Golden Roofpark Axamer Lizum\Golden Roofpark.jpg" />
     <Content Include="Content\Media2\Images\BetterparkHintertux\BetterparkHintertux1.jpg" />
+    <Content Include="Views\Home\Impressum.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Registration.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Shared\Message.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Media2\" />
-    <Folder Include="Content\Media2\Images\" />
-    <Folder Include="Content\Media2\Images\BetterparkHintertux\" />
-    <Folder Include="Media\Images\Golden Roofpark Axamer Lizum\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
