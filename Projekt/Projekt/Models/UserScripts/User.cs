@@ -27,7 +27,7 @@ namespace Projekt.Models.UserScripts
         public Gender Gender { get; set; }
         public string Username { get; set; }
 
-        public User () : this (0, "", "", DateTime.Now, 0, "", "", Gender.notSpecified, "") { }
+        public User () : this (0, "", "", DateTime.Now, 0, "", "", Gender.NotSpecified, "") { }
         public User(int userid, string name, string lastname, DateTime birthday, int isadmin, string eMail, string password, Gender gender, 
             string username)
         {
@@ -46,6 +46,6 @@ namespace Projekt.Models.UserScripts
 
     public enum Gender
     {
-        male, female, notSpecified
+        Male, Female, NotSpecified
     }
 }

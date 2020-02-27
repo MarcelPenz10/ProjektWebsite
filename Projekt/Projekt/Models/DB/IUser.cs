@@ -9,5 +9,6 @@ namespace Projekt.Models.DB
         void Open();
         void Close();
         bool Insert(User u);
+        User Login(User u);
     }
 }

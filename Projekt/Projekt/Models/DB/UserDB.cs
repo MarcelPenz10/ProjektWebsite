@@ -7,7 +7,7 @@ namespace Projekt.Models.DB
 {
     public class UserDB : IUser
     {
-        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=root; password=Ghost3131;";
+        private string _connectionString = "Server=localhost; Database=ParkWebsite; UID=WebProjekt; password=admin;";
         private MySqlConnection _connection;
 
         public void Open()
@@ -29,8 +29,10 @@ namespace Projekt.Models.DB
                 this._connection.Close();
             }
         }
+
         public bool Insert (User u)
         {
+            int Gender = 2;
             if (this._connection == null || this._connection.State != ConnectionState.Open)
             {
                 return false;
@@ -40,17 +42,27 @@ namespace Projekt.Models.DB
             {
                 return false;
             }
-
+            if (u.Gender.ToString() == "Male")
+            {
+                Gender = 0;
+            }
+            if (u.Gender.ToString() == "Feale")
+            {
+                Gender = 1;
+            }
+            if (u.Gender.ToString() == "NotSpecified")
+            {
+                Gender = 2;
+            }
             try
             {
-                // Command (Befehl) erzeugen
                 MySqlCommand cmdInsert = this._connection.CreateCommand();
 
-                cmdInsert.CommandText = "insert into users values (null, @firstname, @lastname, @birthdate, @gender, @email, @username, sha1(@pwd), @isAdmin)";
+                cmdInsert.CommandText = "insert into user values (null, @firstname, @lastname, @birthdate, @isAdmin, @email, sha1(@pwd), @gender, @username)";
                 cmdInsert.Parameters.AddWithValue("firstname", u.Name);
                 cmdInsert.Parameters.AddWithValue("lastname", u.Lastname);
                 cmdInsert.Parameters.AddWithValue("birthdate", u.Birthday);
-                cmdInsert.Parameters.AddWithValue("gender", u.Gender);
+                cmdInsert.Parameters.AddWithValue("gender", Gender);
                 cmdInsert.Parameters.AddWithValue("email", u.EMail);
                 cmdInsert.Parameters.AddWithValue("username", u.Username);
                 cmdInsert.Parameters.AddWithValue("pwd", u.Password);
@@ -63,5 +75,35 @@ namespace Projekt.Models.DB
             }
         }
 
+        public User Login (User u)
+        {
+            if (u == null)
+            {
+                return null;
+            }
+            User user = new User();
+            MySqlCommand cmd = this._connection.CreateCommand();
+            MySqlParameter paraid = new MySqlParameter("username", u.Username);
+            cmd.CommandText = "Select username, password from User where username=@username";
+            cmd.Parameters.Add(paraid);
+
+            try
+            {
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        user.Username = Convert.ToString(reader["username"]);
+                        user.Password = Convert.ToString(reader["password"]);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return user == null ? null : user;
+
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Projekt.Models.UserScripts.User
+
+@{
     ViewBag.Title = "Registration";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -51,7 +53,7 @@
         {
             new SelectListItem{ Text = "Male", Value = "0" },
             new SelectListItem{ Text = "Female", Value = "1" },
-            new SelectListItem{ Text = "Not Specified", Value = "2" }
+            new SelectListItem{ Text = "NotSpecified", Value = "2" }
 
         }, new { onchange = "getAlldata()" })
             </td>

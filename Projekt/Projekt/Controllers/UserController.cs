@@ -10,10 +10,38 @@ namespace Projekt.Controllers
     {
         public ActionResult Index()
         {
-            return View ();
+            return View();
         }
+        [HttpGet]
         public ActionResult Login()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(User u)
+        {
+            if (u == null)
+            {
+                return View(u);
+            }
+            UserDB repUsers = new UserDB();
+            try
+            {
+                repUsers.Open();
+                User user = repUsers.Login(u);
+                if (user != null)
+                {
+                    if (user.Password == u.Password)
+                    {
+                        Session["loggedInUser"] = u;
+                        return View("Index", "Park");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             return View();
         }
         [HttpGet]
@@ -23,9 +51,9 @@ namespace Projekt.Controllers
             return View(u);
         }
 
-        [HttpPost] 
+        [HttpPost]
         public ActionResult Registration(User personDataFromForm)
-        { 
+        {
             if (personDataFromForm != null)
             {
                 if (ModelState.IsValid)
@@ -37,20 +65,17 @@ namespace Projekt.Controllers
                         repUsers.Open();
                         if (repUsers.Insert(personDataFromForm))
                         {
-                            return View("Message", new Message("Registierung", "Sie wurden erfolgreich registriert."));
-                        }
-                        else
-                        {
-                            return View("Message", new Message("Registierung", "Sie konnten nicht registriert werden."));
+                            Session["loggedInUser"] = personDataFromForm;
+                            return View("~/Views/Park/Index.cshtml");
                         }
                     }
                     catch (MySqlException)
                     {
-                        return View("Message", new Message("Datenbankfehler", "Es gibt zur Zeit Probleme mit der Datenbank."));
+                        return View(personDataFromForm);
                     }
                     catch (Exception)
                     {
-                        return View("Message", new Message("Allgemeiner Fehler", "Es ist ein allgemeiner Fehler aufgetreten."));
+                        return View(personDataFromForm);
                     }
                     finally
                     {
@@ -62,5 +87,7 @@ namespace Projekt.Controllers
                     return View(personDataFromForm);
                 }
             }
+            return View(personDataFromForm);
         }
+    }
 }
