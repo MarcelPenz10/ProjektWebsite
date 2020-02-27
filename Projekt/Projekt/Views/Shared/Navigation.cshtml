@@ -11,14 +11,14 @@
         if (Session["loggedInUser"] != null)
         {
             <li>
-                <button onclick="logout()">Logout</button>
+                <button onclick="logouts()">Logout</button>
             </li>
         }
     }
 </ul>
 
 <script>
-    function logout() {
+    function logouts() {
         @Session["loggedInUser"] == null;
     }
 </script>
