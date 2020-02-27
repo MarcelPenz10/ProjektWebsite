@@ -26,5 +26,10 @@ namespace Projekt.Controllers
 
             return View(p);           
         }
+
+        public ActionResult Impressum()
+        {
+            return View();
+        }
     }
 }
