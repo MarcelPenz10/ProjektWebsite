@@ -2,6 +2,23 @@
     <li class="nav_level1">@Html.ActionLink("Home", "index", "home")</li>
     <li class="nav_level1">@Html.ActionLink("Über Uns", "about", "home")</li>
     <li class="nav_level1">@Html.ActionLink("Parks", "index", "park")</li>
-    <li class="nav_level1">@Html.ActionLink("Login", "Login", "User")</li>
-    <li class="nav_level1">@Html.ActionLink("Registration", "Registration", "User")</li>
+    @{
+        if (Session["loggedInUser"] == null)
+        {
+            <li class="nav_level1">@Html.ActionLink("Login", "Login", "User")</li>
+            <li class="nav_level1">@Html.ActionLink("Registration", "Registration", "User")</li>
+        }
+        if (Session["loggedInUser"] != null)
+        {
+            <li>
+                <button onclick="logout()">Logout</button>
+            </li>
+        }
+    }
 </ul>
+
+<script>
+    function logout() {
+        @Session["loggedInUser"] == null;
+    }
+</script>
