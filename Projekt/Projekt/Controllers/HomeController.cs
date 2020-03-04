@@ -31,5 +31,11 @@ namespace Projekt.Controllers
         {
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            Session["loggedInUser"] = null;
+            return View("Index");
+        }
     }
 }

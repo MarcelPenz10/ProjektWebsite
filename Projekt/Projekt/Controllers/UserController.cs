@@ -31,11 +31,12 @@ namespace Projekt.Controllers
             {
                 repUsers.Open();
                 User user = repUsers.Login(u);
-                if (user != null)
+                if (user.UserId != 0)
                 { 
-                    Session["loggedInUser"] = u;
+                    Session["loggedInUser"] = user;
                     return RedirectToAction("Index", "Park");
                 }
+                repUsers.Close();
             }
             catch (Exception)
             {
@@ -64,7 +65,8 @@ namespace Projekt.Controllers
                         repUsers.Open();
                         if (repUsers.Insert(personDataFromForm))
                         {
-                            Session["loggedInUser"] = personDataFromForm;
+                            User user = repUsers.Login(personDataFromForm);
+                            Session["loggedInUser"] = user;
                             return RedirectToAction("Index", "Park");
                         }
                     }

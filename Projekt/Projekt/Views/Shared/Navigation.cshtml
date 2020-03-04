@@ -10,15 +10,7 @@
         }
         if (Session["loggedInUser"] != null)
         {
-            <li>
-                <button onclick="logouts()">Logout</button>
-            </li>
+            <button onclick="location.href='@Url.Action("Logout", "Home")'">Logout</button>
         }
     }
 </ul>
-
-<script>
-    function logouts() {
-        @Session["loggedInUser"] == null;
-    }
-</script>
