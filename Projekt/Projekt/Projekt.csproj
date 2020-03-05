@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,6 +219,8 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Registration.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Media\Images\Betterpark Hintertux\BetterparkHintertux.jpg" />

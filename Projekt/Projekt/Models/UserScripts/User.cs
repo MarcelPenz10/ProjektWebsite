@@ -5,18 +5,18 @@ namespace Projekt.Models.UserScripts
 {
     public class User
     {
-        private int _userid;
-        public int UserId
-        {
-            get { return _userid; }
-            set
-            {
-                if (_userid >= 0)
-                {
-                    _userid = value;
-                }
-            }
-        }
+        //private int _userid;
+        public int UserId;
+        //{
+        //    get { return _userid; }
+        //    set
+        //    {
+        //        if (_userid >= 0)
+        //        {
+        //            _userid = value;
+        //        }
+        //    }
+        //}
 
         public string Name { get; set; }
         public string Lastname { get; set; }
