@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Projekt.Models;
+using Projekt.Models.UserScripts;
 
 namespace Projekt.Models.DB
 {
@@ -11,5 +11,6 @@ namespace Projekt.Models.DB
         List<Park> GetAllSnowparks();
         Park GetOneSnowpark(int id);
         bool AddComment(Comments comment);
+        bool DeleteComment(Comments comment);
     }
 }

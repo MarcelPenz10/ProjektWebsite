@@ -184,5 +184,24 @@ namespace Projekt.Models.DB
             }
             return false;
         }
+        public bool DeleteComment(Comments comment)
+        {
+            if (comment != null)
+            {
+                try
+                {
+                    MySqlCommand cmdDelete = this._connection.CreateCommand();
+
+                    cmdDelete.CommandText = "delete * from comments where id=@id";
+                    cmdDelete.Parameters.Add(comment.Commentid);
+                    return cmdDelete.ExecuteNonQuery() == 1;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return false;
+        }
     }
 }

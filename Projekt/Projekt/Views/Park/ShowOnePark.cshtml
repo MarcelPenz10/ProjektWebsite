@@ -116,23 +116,35 @@
     </tr>
 @for (int i = 0; i < Model.Park.Comments.Count; i++)
 {
-
-        <tr>
+    if (Session["Username"].ToString() == Model.Park.Comments[i].Username) {
+                <tr>
             <td>
                 <p id="CommentToEdit">@Model.Park.Comments[i].Comment</p>
             </td>
             <td>
                 <p>@Model.Park.Comments[i].Username</p>
             </td>
-    @if (Session["Username"].ToString() == Model.Park.Comments[i].Username) {
             <td>
                 <button id="EditButton">Edit Comment</button>
             </td>
             <td>
-                <button>Delete Comment</button>
+                @using (Html.BeginForm("DeleteComment", "ParkController"))
+                {
+                    <input type="submit" value="Delete Comment" />
+                }
             </td>
-    }
          </tr>
+    }
+    else {
+                <tr>
+            <td>
+                <p>@Model.Park.Comments[i].Comment</p>
+            </td>
+            <td>
+                <p>@Model.Park.Comments[i].Username</p>
+            </td>
+         </tr>
+    }
 }
     </table>
 <br />
