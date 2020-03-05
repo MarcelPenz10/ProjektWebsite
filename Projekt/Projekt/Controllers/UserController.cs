@@ -35,6 +35,7 @@ namespace Projekt.Controllers
                 {
                     Session["Username"] = user.Username;
                     Session["loggedInUser"] = user;
+                    Session["IsAdmin"] = user.isAdmin;
                     return RedirectToAction("Index", "Park");
                 }
                 repUsers.Close();

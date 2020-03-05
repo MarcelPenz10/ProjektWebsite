@@ -11,6 +11,6 @@ namespace Projekt.Models.DB
         List<Park> GetAllSnowparks();
         Park GetOneSnowpark(int id);
         bool AddComment(Comments comment);
-        bool DeleteComment(Comments comment);
+        bool DeleteComment(int Commentid);
     }
 }

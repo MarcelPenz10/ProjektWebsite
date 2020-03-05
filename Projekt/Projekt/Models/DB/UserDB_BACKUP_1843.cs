@@ -60,7 +60,7 @@ namespace Projekt.Models.DB
             {
                 MySqlCommand cmdInsert = this._connection.CreateCommand();
 
-                cmdInsert.CommandText = "insert into user values (null, @firstname, @lastname, @birthdate, @isAdmin, @email, sha2(@pwd, 256), @gender, @username)";
+                cmdInsert.CommandText = "insert into user values (null, @firstname, @lastname, @birthdate, @isAdmin, @email, sha2(@pwd, 512), @gender, @username)";
                 cmdInsert.Parameters.AddWithValue("firstname", u.Name);
                 cmdInsert.Parameters.AddWithValue("lastname", u.Lastname);
                 cmdInsert.Parameters.AddWithValue("birthdate", u.Birthday);
@@ -85,11 +85,11 @@ namespace Projekt.Models.DB
             }
             User user = new User();
             MySqlCommand cmd = this._connection.CreateCommand();
-
+<<<<<<< HEAD
             cmd.CommandText = "Select username, password from User where username=@username and password=sha2(@pwd, 512)";
-
+=======
             cmd.CommandText = "Select * from User where username=@username and password=sha1(@pwd)";
-
+>>>>>>> 69ef8b6951a66c98368734a988d29dd9af59a879
             cmd.Parameters.AddWithValue("username", u.Username);
             cmd.Parameters.AddWithValue("pwd", u.Password);
 

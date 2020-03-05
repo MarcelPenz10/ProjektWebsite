@@ -57,17 +57,18 @@ namespace Projekt.Controllers
             return View(pVM);
         }
         [HttpPost]
-        public ActionResult DeleteComment(Comments comment) 
+        public ActionResult DeleteComment(int Commentid) 
         {
             park.Open();
             Park onepark = park.GetOneSnowpark((int)Session["ParkId"]);
+            park.DeleteComment(Commentid);
             park.Close();
             DirectoryInfo Images = CountFiles(onepark.Name);
             FileInfo[] files = Images.GetFiles();
 
             ParkViewModel pVM = new ParkViewModel(onepark, Images, files, "");
             Session["ParkId"] = onepark.ParkId;
-            return View(pVM);
+            return RedirectToAction("ShowOnePark", new { id = onepark.ParkId });
         }
     }
 }

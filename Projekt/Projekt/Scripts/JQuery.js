@@ -9,7 +9,9 @@
         $(this).find('img').css('opacity', '1');
     });
     $("#EditButton").click(function () {
-        $( "#CommentToEdit" ).replaceWith( "<textarea id='Comment'>" + $("#CommentToEdit").text() + "</textarea>" );
+        $( "#CommentToEdit").replaceWith( "<textarea id='Comment'>" + $("#CommentToEdit").text() + "</textarea>" );
+        $("#EditButton").replaceWith("<button id='SaveButton'>" + "Save Comment" + "</button>");
     });
+
 });
 
