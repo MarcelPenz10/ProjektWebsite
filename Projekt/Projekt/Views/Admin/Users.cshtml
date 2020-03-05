@@ -6,57 +6,75 @@
     ViewBag.Title = "User";
 }
 
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
 <h2>Alle registrierten Benutzer</h2>
 
 @if ((Model != null) && (Model.Count > 0))
 {
-
-    <table>
-        <thead>
-            <tr>
-                <td colspan="7">Registrierte Benutzer</td>
-                <td>UserID</td>
-                <td>Vorname</td>
-                <td>Nachname</td>
-                <td>Geschlecht</td>
-                <td>Geburtsdatum</td>
-                <td>Benutzername</td>
-                <td>Admin</td>
-                <td>löschen</td>
-               
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (User u in Model)
-            {
+    
+        <table>
+            <thead>
                 <tr>
-                    <td>@u.UserId</td>
-                    <td>@u.Name</td>
-                    <td>@u.Lastname</td>
-                    <td>@u.Gender</td>
-                    <td>@u.Birthday.ToLongDateString()</td>
-                    <td>@u.isAdmin</td>
-                    <td>@u.EMail</td>
-                    <td>@u.Username</td>
-                    <td>
-             
-                        <form method="post" action="/admin/delete/@u.UserId">
-                            <input type="submit" value="löschen" />
-                        </form>
 
-                    </td>
-                    
+
+                    <td>UserID</td>
+                    <td>Vorname</td>
+                    <td>Nachname</td>
+                    <td>Geschlecht</td>
+                    <td>Geburtsdatum</td>
+                    <td>Admin</td>
+                    <td>EMail</td>
+                    <td>Benutzername</td>
+
                 </tr>
-            }
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="8"></td>
-            </tr>
-        </tfoot>
+            </thead>
+            <tbody>
+                @foreach (User u in Model)
+                {
+                    <tr>
+                        <td>@u.UserId</td>
+                        <td>@u.Name</td>
+                        <td>@u.Lastname</td>
+                        <td>@u.Gender</td>
+                        <td>@u.Birthday.ToLongDateString()</td>
+                        <td>@u.isAdmin</td>
+                        <td>@u.EMail</td>
+                        <td>@u.Username</td>
+                        <td>
+
+                            <form method="post" action="/admin/delete/@u.UserId">
+                                <input type="submit" value="löschen" />
+                            </form>
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
 
 
-    </table>
+        </table>
 
-
-}
+        
+    }
