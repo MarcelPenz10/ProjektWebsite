@@ -12,7 +12,7 @@
         {
             if (Session["IsAdmin"].ToString() == "1") {
                     <li class="nav_level1">@Html.ActionLink("Admin", "index", "admin")</li>
-                    <li class="nav_level1">@Html.ActionLink("alle Benutzer", "users", "admin")</li>
+                    <li class="nav_level1">@Html.ActionLink("alle Benutzer", "Users", "Admin")</li>
             }
             <button onclick="location.href='@Url.Action("Logout", "Home")'">Logout</button>
         }

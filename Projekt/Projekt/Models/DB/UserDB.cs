@@ -164,5 +164,41 @@ namespace Projekt.Models.DB
             }
             return users;
         }
+
+        public User GetUser(int id)
+        {
+            DbCommand cmdGetUser = this._connection.CreateCommand();
+            cmdGetUser.CommandText = "SELECT * FROM user WHERE id=@uid";
+
+            DbParameter paramId = cmdGetUser.CreateParameter();
+            paramId.ParameterName = "uid";
+            paramId.Value = id;
+            paramId.DbType = DbType.Int32;
+
+            cmdGetUser.Parameters.Add(paramId);
+
+            using (DbDataReader reader = cmdGetUser.ExecuteReader())
+            {
+                if (!reader.HasRows)
+                {
+                    return null;
+                }
+
+                reader.Read();
+                return new User
+                {
+                    // ID ... so lautet das feld in der Klasse User
+                    // "id" ... so lautet der Spaltenname in der Datenbanktabelle users
+
+                    UserId = Convert.ToInt32(reader["id"]),
+                    Name = Convert.ToString(reader["name"]),
+                    Lastname = Convert.ToString(reader["lastname"]),
+                    Gender = (Gender)Convert.ToInt32(reader["gender"]),
+                    Birthday = Convert.ToDateTime(reader["birthday"]),
+                    Username = Convert.ToString(reader["username"]),
+                    Password = ""
+                };
+            }
+        }
     }
 }

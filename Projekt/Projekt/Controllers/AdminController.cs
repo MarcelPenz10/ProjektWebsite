@@ -35,12 +35,12 @@ namespace Projekt.Controllers
         }
 
         
-        public ActionResult Delete(int UserId)
+        public ActionResult Delete(int id)
         {
             rep = new UserDB();
             rep.Open();
 
-            if (rep.Delete(UserId))
+            if (rep.Delete(id))
             {
                 rep.Close();
                 return View("Message", new Message("User löschen", "Benutzer wurde erfolgreich gelöscht!"));
