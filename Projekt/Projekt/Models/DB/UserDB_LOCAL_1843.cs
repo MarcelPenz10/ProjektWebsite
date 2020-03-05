@@ -68,7 +68,7 @@ namespace Projekt.Models.DB
                 cmdInsert.Parameters.AddWithValue("email", u.EMail);
                 cmdInsert.Parameters.AddWithValue("username", u.Username);
                 cmdInsert.Parameters.AddWithValue("pwd", u.Password);
-                cmdInsert.Parameters.AddWithValue("isAdmin", u.isAdmin = 0);
+                cmdInsert.Parameters.AddWithValue("isAdmin", u.isAdmin == 0);
                 return cmdInsert.ExecuteNonQuery() == 1;
             }
             catch (Exception)
@@ -85,11 +85,7 @@ namespace Projekt.Models.DB
             }
             User user = new User();
             MySqlCommand cmd = this._connection.CreateCommand();
-<<<<<<< HEAD
             cmd.CommandText = "Select username, password from User where username=@username and password=sha2(@pwd, 512)";
-=======
-            cmd.CommandText = "Select * from User where username=@username and password=sha1(@pwd)";
->>>>>>> 69ef8b6951a66c98368734a988d29dd9af59a879
             cmd.Parameters.AddWithValue("username", u.Username);
             cmd.Parameters.AddWithValue("pwd", u.Password);
 
@@ -101,23 +97,15 @@ namespace Projekt.Models.DB
                     {
                         user.Username = Convert.ToString(reader["username"]);
                         user.Password = Convert.ToString(reader["password"]);
-                        user.Birthday = Convert.ToDateTime(reader["birthday"]);
-                        user.EMail = Convert.ToString(reader["email"]);
-                        user.Lastname = Convert.ToString(reader["lastname"]);
-                        user.Name = Convert.ToString(reader["name"]);
-                        user.UserId = Convert.ToInt32(reader["id"]);
-                        user.isAdmin = Convert.ToInt32(reader["isAdmin"]);
-                        user.Gender = Gender.Male;
                     }
-
                 }
-                return user == null ? null : user;
-
             }
             catch (Exception)
             {
                 throw;
             }
+            return user == null ? null : user;
+
         }
 
         public bool Delete(int UserId)

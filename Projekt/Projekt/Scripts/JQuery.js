@@ -8,5 +8,8 @@
         $(this).find('p').hide();
         $(this).find('img').css('opacity', '1');
     });
+    $("#EditButton").click(function () {
+        $("CommentToEdit").replaceWith("<textarea id='Comment'>" + $("CommentToEdit").text() + "</textarea>")
+    });
 });
 

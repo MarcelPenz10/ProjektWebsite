@@ -10,5 +10,6 @@ namespace Projekt.Models.DB
         void Close();
         List<Park> GetAllSnowparks();
         Park GetOneSnowpark(int id);
+        bool AddComment(Comments comment);
     }
 }

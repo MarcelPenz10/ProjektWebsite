@@ -94,7 +94,7 @@ namespace Projekt.Models
         public string Location { get; set; }
 
         public string Description { get; set; }
-
+        
         public Park () : this (0, "", 0, 0,0, 0, 0, new List<Comments>(), "", "") { }
         public Park(int parkId, string name, int length, int jumps, int rails, int cableways, int open, List<Comments> comments, string location, string description)
         {

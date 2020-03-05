@@ -147,7 +147,8 @@ namespace Projekt.Models.DB
                             {
                                 Commentid = Convert.ToInt32(reader["id"]),
                                 Comment = Convert.ToString(reader["comment"]),
-                                //Userid = Convert.ToInt32(reader["userid"]),
+                                Userid = Convert.ToInt32(reader["userid"]),
+                                Username = Convert.ToString(reader["username"]),
                             }
                         );
                     }
@@ -159,6 +160,29 @@ namespace Projekt.Models.DB
             {
                 throw;
             }
+        }
+
+        public bool AddComment(Comments comment)
+        {
+            if (comment != null)
+            {
+                try
+                {
+                    MySqlCommand cmdInsert = this._connection.CreateCommand();
+
+                    cmdInsert.CommandText = "insert into comments values (null, @ParkId, @Comment, @UserId, @username)";
+                    cmdInsert.Parameters.AddWithValue("ParkId", comment.Parkid);
+                    cmdInsert.Parameters.AddWithValue("UserId", comment.Userid);
+                    cmdInsert.Parameters.AddWithValue("Comment", comment.Comment);
+                    cmdInsert.Parameters.AddWithValue("username", comment.Username);
+                    return cmdInsert.ExecuteNonQuery() == 1;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return false;
         }
     }
 }

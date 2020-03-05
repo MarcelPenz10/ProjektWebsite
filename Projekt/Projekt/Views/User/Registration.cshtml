@@ -50,12 +50,12 @@
             </td>
             <td>
                 @Html.DropDownList("Direction", new List<SelectListItem>
-        {
-            new SelectListItem{ Text = "Male", Value = "0" },
-            new SelectListItem{ Text = "Female", Value = "1" },
-            new SelectListItem{ Text = "NotSpecified", Value = "2" }
+                {
+                    new SelectListItem{ Text = "Male", Value = "Male" },
+                    new SelectListItem{ Text = "Female", Value = "Female" },
+                    new SelectListItem{ Text = "NotSpecified", Value = "NotSpecified" }
 
-        }, new { onchange = "getAlldata()" })
+                }, new { onchange = "getAlldata()" })
             </td>
         </tr>
 

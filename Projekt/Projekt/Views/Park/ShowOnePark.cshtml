@@ -96,10 +96,45 @@
     </tr>
 </table>
 
+@{
+    if (@Session["loggedInUser"] != null)
+    {
+        using (Html.BeginForm())
+        {
+            <p>Write an Comment:</p>
+            @Html.TextAreaFor(p => p.NewComment, new { cols = 40, rows = 10 })
+            <br />
+            <input type="submit" value="Comment" />
+        }
+    }
+}
+<table>
+    <tr>
+        <td style="padding-right: 400px; text-decoration:solid">Comment</td>
+        <td style="text-decoration: solid">Username</td>
+        <td style="padding-right: 100px"></td>
+    </tr>
 @for (int i = 0; i < Model.Park.Comments.Count; i++)
 {
-    <p>@Model.Park.Comments[i].Comment</p>
+
+        <tr>
+            <td>
+                <p id="CommentToEdit">@Model.Park.Comments[i].Comment</p>
+            </td>
+            <td>
+                <p>@Model.Park.Comments[i].Username</p>
+            </td>
+    @if (Session["Username"].ToString() == Model.Park.Comments[i].Username) {
+            <td>
+                <button id="EditButton">Edit Comment</button>
+            </td>
+            <td>
+                <button>Delete Comment</button>
+            </td>
+    }
+         </tr>
 }
+    </table>
 <br />
 <form>
     <input type="button" value="Back" onclick="history.back()">
