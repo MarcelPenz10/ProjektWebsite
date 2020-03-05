@@ -112,18 +112,27 @@
     <tr>
         <td style="padding-right: 400px; text-decoration:solid">Comment</td>
         <td style="text-decoration: solid">Username</td>
+        <td style="padding-right: 100px"></td>
     </tr>
 @for (int i = 0; i < Model.Park.Comments.Count; i++)
 {
 
         <tr>
             <td>
-                <p>@Model.Park.Comments[i].Comment</p>
+                <p id="CommentToEdit">@Model.Park.Comments[i].Comment</p>
             </td>
             <td>
                 <p>@Model.Park.Comments[i].Username</p>
             </td>
-        </tr>
+    @if (Session["Username"].ToString() == Model.Park.Comments[i].Username) {
+            <td>
+                <button id="EditButton">Edit Comment</button>
+            </td>
+            <td>
+                <button>Delete Comment</button>
+            </td>
+    }
+         </tr>
 }
     </table>
 <br />

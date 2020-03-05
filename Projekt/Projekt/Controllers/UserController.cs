@@ -32,7 +32,8 @@ namespace Projekt.Controllers
                 repUsers.Open();
                 User user = repUsers.Login(u);
                 if (user.UserId != 0)
-                { 
+                {
+                    Session["Username"] = user.Username;
                     Session["loggedInUser"] = user;
                     return RedirectToAction("Index", "Park");
                 }
@@ -66,6 +67,7 @@ namespace Projekt.Controllers
                         if (repUsers.Insert(personDataFromForm))
                         {
                             User user = repUsers.Login(personDataFromForm);
+                            Session["Username"] = user.Username;
                             Session["loggedInUser"] = user;
                             return RedirectToAction("Index", "Park");
                         }
