@@ -13,5 +13,7 @@ namespace Projekt.Models.DB
         bool Delete(int UserId);
 
         List<User> GetAllUser();
+        bool UpdateUserData(int UserId, User newUserData);
+        User GetUser(int UserId);
     }
 }

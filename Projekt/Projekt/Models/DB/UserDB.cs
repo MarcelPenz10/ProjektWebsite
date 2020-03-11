@@ -165,14 +165,14 @@ namespace Projekt.Models.DB
             return users;
         }
 
-        public User GetUser(int id)
+        public User GetUser(int UserId)
         {
             DbCommand cmdGetUser = this._connection.CreateCommand();
             cmdGetUser.CommandText = "SELECT * FROM user WHERE id=@uid";
 
             DbParameter paramId = cmdGetUser.CreateParameter();
             paramId.ParameterName = "uid";
-            paramId.Value = id;
+            paramId.Value = UserId;
             paramId.DbType = DbType.Int32;
 
             cmdGetUser.Parameters.Add(paramId);
@@ -187,8 +187,8 @@ namespace Projekt.Models.DB
                 reader.Read();
                 return new User
                 {
-                    // ID ... so lautet das feld in der Klasse User
-                    // "id" ... so lautet der Spaltenname in der Datenbanktabelle users
+                    
+
 
                     UserId = Convert.ToInt32(reader["id"]),
                     Name = Convert.ToString(reader["name"]),
@@ -199,6 +199,73 @@ namespace Projekt.Models.DB
                     Password = ""
                 };
             }
+        }
+
+        public bool UpdateUserData(int UserId, User newUserData)
+        {
+            DbCommand cmdUpdate = this._connection.CreateCommand();
+            cmdUpdate.CommandText = "UPDATE user SET name=@name, lastname =@lastname, + " +
+                "gender=@gender, birthday=@birthday, email=@eMail, isAdmin=@isadmin, username=@username, password=sha2(@password, 256)" +
+                "WHERE id=@userid";
+
+            DbParameter paramFirstname = cmdUpdate.CreateParameter();
+            paramFirstname.ParameterName = "name";
+            paramFirstname.Value = newUserData.Name;
+            paramFirstname.DbType = DbType.String;
+
+            DbParameter paramLastname = cmdUpdate.CreateParameter();
+            paramLastname.ParameterName = "lastname";
+            paramLastname.Value = newUserData.Lastname;
+            paramLastname.DbType = DbType.String;
+
+            DbParameter paramGender = cmdUpdate.CreateParameter();
+            paramGender.ParameterName = "gender";
+            paramGender.Value = newUserData.Gender;
+            paramGender.DbType = DbType.Int32;
+
+            DbParameter paramBDate = cmdUpdate.CreateParameter();
+            paramBDate.ParameterName = "birthday";
+            paramBDate.Value = newUserData.Birthday;
+            paramBDate.DbType = DbType.Date;
+
+            DbParameter paramEmail = cmdUpdate.CreateParameter();
+            paramEmail.ParameterName = "email";
+            paramEmail.Value = newUserData.EMail;
+            paramEmail.DbType = DbType.String;
+
+            DbParameter paramIsAdmin = cmdUpdate.CreateParameter();
+            paramIsAdmin.ParameterName = "isAdmin";
+            paramIsAdmin.Value = newUserData.isAdmin;
+            paramIsAdmin.DbType = DbType.Int32;
+
+            DbParameter paramUsername = cmdUpdate.CreateParameter();
+            paramUsername.ParameterName = "username";
+            paramUsername.Value = newUserData.Username;
+            paramUsername.DbType = DbType.String;
+
+            DbParameter paramPwd = cmdUpdate.CreateParameter();
+            paramPwd.ParameterName = "password";
+            paramPwd.Value = newUserData.Password;
+            paramPwd.DbType = DbType.String;
+
+            DbParameter paramID = cmdUpdate.CreateParameter();
+            paramID.ParameterName = "id";
+            paramID.Value = newUserData.UserId;
+            paramID.DbType = DbType.String;
+
+
+            cmdUpdate.Parameters.Add(paramFirstname);
+            cmdUpdate.Parameters.Add(paramLastname);
+            cmdUpdate.Parameters.Add(paramGender);
+            cmdUpdate.Parameters.Add(paramBDate);
+            cmdUpdate.Parameters.Add(paramEmail);
+            cmdUpdate.Parameters.Add(paramIsAdmin);
+            cmdUpdate.Parameters.Add(paramUsername);
+            cmdUpdate.Parameters.Add(paramPwd);
+            cmdUpdate.Parameters.Add(paramID);
+
+
+            return cmdUpdate.ExecuteNonQuery() == 1;
         }
     }
 }
