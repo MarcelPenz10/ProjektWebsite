@@ -49,24 +49,32 @@
             <tbody>
                 @foreach (User u in Model)
                 {
-                    <tr>
-                        <td>@u.UserId</td>
-                        <td>@u.Name</td>
-                        <td>@u.Lastname</td>
-                        <td>@u.Gender</td>
-                        <td>@u.Birthday.ToLongDateString()</td>
-                        <td>@u.isAdmin</td>
-                        <td>@u.EMail</td>
-                        <td>@u.Username</td>
-                        <td>
+                <tr>
+                    <td>@u.UserId</td>
+                    <td>@u.Name</td>
+                    <td>@u.Lastname</td>
+                    <td>@u.Gender</td>
+                    <td>@u.Birthday.ToLongDateString()</td>
+                    <td>@u.isAdmin</td>
+                    <td>@u.EMail</td>
+                    <td>@u.Username</td>
+                    <td>
 
-                            <form method="post" action="/admin/delete/@u.UserId">
-                                <input type="submit" value="löschen" />
-                            </form>
+                        <form method="post" action="/admin/delete/@u.UserId">
+                            <input type="submit" value="Löschen" />
+                        </form>
 
-                        </td>
+                    </td>
 
-                    </tr>
+                    <td>
+
+                        <form method="post" action="/admin/updateUserData/@u.UserId">
+                            <input type="submit" value="Update" />
+                        </form>
+
+                    </td>
+
+                </tr>
                 }
             </tbody>
             <tfoot>
