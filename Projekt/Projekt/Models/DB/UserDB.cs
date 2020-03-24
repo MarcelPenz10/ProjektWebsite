@@ -263,6 +263,7 @@ namespace Projekt.Models.DB
             cmdUpdate.Parameters.Add(paramUsername);
             cmdUpdate.Parameters.Add(paramPwd);
             cmdUpdate.Parameters.Add(paramID);
+            
 
 
             return cmdUpdate.ExecuteNonQuery() == 1;

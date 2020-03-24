@@ -53,12 +53,12 @@ namespace Projekt.Controllers
 
         }
 
-        public ActionResult UpdateUserData(int UserId, User newUserData)
+        public ActionResult UpdateUserData(int id, User newUserData)
         {
             rep = new UserDB();
             rep.Open();
 
-            if (rep.UpdateUserData(UserId, newUserData))
+            if (rep.UpdateUserData(id, newUserData))
             {
                 rep.Close();
                 return View("Message", new Message("User bearbeiten", "Benutzer wurde erfolgreich geändert"));
